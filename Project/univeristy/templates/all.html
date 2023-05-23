@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/utils.css' %}" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="{% static 'img/vlr.png' %}" alt="">
+      <h1 class="barand"><span>Oyun</span> ZAD-ZUD</h1>
+      <nav>
+        <ul>
+          {% for language in languages %}
+          <li>
+            <a href="{% url 'language' language.name %}">{{ language }}</a>
+          </li>
+          {% endfor %}
+          <li><a href="{% url 'all' %}">ALL</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="banner pt-3">
+      <img src="{% static 'img/goaf1.png' %}" alt="">
+    </div>
+    <div class="main-div">
+      <b><h1 class="title">VALORANT</h1></b>
+      <div class="umumi">
+        <div class="row">
+          <div class="oyun">
+            <div class="top-oyun">
+              <img src="{% static 'img/valor.jpg' %}" alt="">
+            </div>
+            <div class="bottom-oyun">
+              <h1>VALORANT</h1>
+              <p><del>18</del>deyil 11$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="image" src="{% static 'img/valor.jpg' %}" alt="" />
+      <h4>
+        VALORANT - Riot Games tərəfindən Windows üçün hazırlanmış və nəşr edilmiş, pulsuz oynanan birinci şəxs taktiki qəhrəman atıcısıdır. 2019-cu ilin oktyabrında Project A kod adı ilə satışa çıxarılan oyun, 7 aprel 2020-ci ildə məhdud girişlə qapalı beta dövrü başladı, ardınca isə 2 iyun 2020-ci ildə buraxıldı.
+      </h4>
+      
+    </div>
+    <div class="main-div">
+      <b><h1 class="title">CS-GO</h1></b>
+      <div class="umumi">
+        <div class="row">
+          <div class="oyun">
+            <div class="top-oyun">
+              <img src="{% static 'img/csgo.jpg' %}" alt="">
+            </div>
+            <div class="bottom-oyun">
+              <h1>CS-GO</h1>
+              <p><del>100</del> DEYIL 31$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="image" src="{% static 'img/csgo.jpg' %}" alt="" />
+      <h4>
+        Counter-Strike - Global Offensive 2012-ci ildə Valve və Hidden Path Entertainment tərəfindən hazırlanmış çox oyunçulu taktiki birinci şəxs atıcısıdır. Bu, Counter-Strike seriyasındakı dördüncü
+      </h4>
+    </div>
+    <div class="main-div">
+      <b><h1 class="title">COD</h1></b>
+      <div class="umumi">
+        <div class="row">
+          <div class="oyun">
+            <div class="top-oyun">
+              <img src="{% static 'img/cod.jpg' %}" alt="">
+            </div>
+            <div class="bottom-oyun">
+              <h1>CALL OF DUTY</h1>
+              <p><del>100</del> DEYIL 31$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="image" src="{% static 'img/cod.jpg' %}" alt="" />
+      <h4>
+        Call of Duty - Activision tərəfindən nəşr olunan birinci şəxs atıcı video oyun franşizidir. 2003-cü ildən başlayaraq, ilk olaraq İkinci Dünya Müharibəsində keçən oyunlara diqqət yetirdi. Zaman keçdikcə serialda Soyuq Müharibənin, futuristik dünyaların və müasir dövrün ortasında qurulmuş oyunlar görüldü.
+      </h4>
+      
+    </div>
+    
+    <div class="main-div">
+      <b><h1 class="title">PUBG</h1></b>
+      <div class="umumi">
+        <div class="row">
+          <div class="oyun">
+            <div class="top-oyun">
+              <img src="{% static 'img/PUBG.PNG' %}" alt="">
+            </div>
+            <div class="bottom-oyun">
+              <h1>PUBG</h1>
+              <p><del>10</del> PULSUZ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="image" src="{% static 'img/PUBG.png' %}" alt="" />
+      <h4>
+        "PUBG Studios" tərəfindən hazırlanan və nəşr olunan onlayn multipleyer döyüş oyunu. 2000-ci ilin yapon filmi "Battle Royale"-dan ilhamlanaraq yaradılmış oyunda, 100 oyunçu paraşütlə bir adaya atlayaraq müxtəlif silah və vasitələrdən istifadə edərək digər oyunçuları öldürüb həyatda qalan son oyunçu olmağa çalışır. Oyun ərazisi vaxt keçdikcə daralmağa başlayır, oyunçular xəritənin təhlükəsiz adlanan ərazisinə daxil olmağa məcbur edilirlər, həyatda qalan yeganə oyunçu və ya komanda matçın qalibi olur.
+      </h4>
+    </div>
+
+    <div class="banner pt-3">
+      <h1 class="footer-h1 title">ƏN SON XƏBƏRLƏR</h1>
+      <img src="{% static 'img/pblit.png' %}" alt="">
+    </div>
+    <footer>
+      <h1 class="footer-h1">Haqqımızda</h1>
+      <p class="footer-p">
+        Saytımız Azərbaycanda oyunlara ödəniş etmək istəyən oyunçular üçün rahat və sərfəli qiymətə ödəniş edəbiləcəyi bir saytdır. Əgər səndə hansısa oyuna ödəniş etmək istəyirsənsə sağ aşağıda çıxan mesaj qutucuğunnan oyunun adını yazıb saytımızda olub olmadığı haqda məlumat əldə edə bilərsiniz
+      </p>
+
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+
+      <p class="footer-p">Made width </i> by ALPAY</p>
+    </footer>
+
+    <div class="footerr">
+      <div class="footer-top">
+        <h1 class="h1-white">Oyun oynamağa hazırlaşırsan?</h1>
+        <h1 class="h1-blue">Davay zəng elə.</h1>
+      </div>
+      <div class="footer-bottom-left">
+      
+        <p>Baku , Yeni Günəşli</p>
+        <div class="footer-gmail">
+          <img src="{% static 'img/gmail.svg'%}" alt="" />
+          <p>alpayabdullayev0@gmail.com</p>
+        </div>
+      </div>
+        <div class="footerrrr">
+          <div class="footer-bottom-right">
+            <div class="footer-links">
+              <a href="">Haqqımızda</a>
+              <a href="">xitmətlərimiz</a>
+              <a href="">Təcrübəmiz</a>
+            </div>
+          </div>
+          <div class="footer-links2">
+            <div class="footer-bottom-right">
+              <div class="footer-links">
+                <a href="">Əlaqə</a>
+                <a href="">Rəylər</a>
+                <a href="">Paketlər</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom-right">
+            <div class="footer-links">
+              <a href="">TikTok</a>
+              <a href="">Instagram</a>
+              <a href="">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-bottom">
+          <div class="footer-bottom-links">
+            <p class="footer-copyright">
+              © All rights reserved. Alpay < 3 Lale. Game ZAD-ZUD / Oyun ZAD-ZUD / Neftçi / Forza 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      
+   </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      form input {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="{% url 'add_page' %}" method="post">
+      <p>
+        <label
+          class="form-label adi form-border"
+          for="{{ form.title.id_for_label }}"
+        >
+          <i>{{form.title.label}}: </i> <br /> </label
+        >{{ form.title }}
+      </p>
+      <div class="form-error">{{ form.title.errors }}</div>
+
+      <p>
+        <label class="form-label adi" for="{{ form.slug.id_for_label }}">
+          <i>{{form.slug.label}}: </i> <br /> </label
+        >{{ form.slug }}
+      </p>
+      <div class="form-error adi">{{ form.slug.errors }}</div>
+
+      <p>
+        <label class="form-label adi" for="{{ form.slugg.id_for_label }}">
+          <i>{{form.slugg.label}}:</i> <br /> </label
+        >{{ form.slugg }}
+      </p>
+      <div class="form-error adi">{{ form.slugg.errors }}</div>
+
+      <p>
+        <label class="form-label" for="{{ form.is_published.id_for_label }}">
+          <i>{{form.is_published.label}}:</i> <br /> </label
+        >{{ form.is_published }}
+      </p>
+      <div class="form-error">{{ form.is_published.errors }}</div>
+
+      <p>
+        <label class="form-label" for="{{ form.content.id_for_label }}">
+          <i>{{form.content.label}}:</i> <br /> </label
+        >{{ form.content }}
+      </p>
+      <div class="form-error">{{ form.content.errors }}</div>
+
+      <button type="submit">Göndər</button>
+      <div class="form-error">{{ form.non_field_errors }}</div>
+    </form>
+
+    {% block content %} {% endblock %}
+  </body>
+</html>

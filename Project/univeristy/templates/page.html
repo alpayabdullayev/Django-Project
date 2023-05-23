@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/utils.css' %}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="{% static 'img/vlr.png' %}" alt="">
+        <h1 class="brand">
+            <span> {% for subcategory in subcategories %} {{ subcategory.link }} {% endfor %}</span>Oyun ZAD-ZUD
+        </h1>
+        <nav>
+            <ul>
+                {% for language in languages %} <li><a href="{% url 'language' language.name %}">{{ language }}</a></li>{% endfor %}
+                <li><a href="{% url 'all' %}">ALL</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="banner pt-3">
+        <img src="{% static 'img/bank.png' %}" alt="">
+    </div>
+    <div class = "main-div">
+        {% if subcategories %}
+        
+            {% for subcategory in subcategories %}
+               <b><h2 class = "title">{{ subcategory.title }}</h2></b> 
+               <img class = "image" src="{{ subcategory.image.url }}" alt="">
+               <h4> {{ subcategory.description }}</h4>
+            {% endfor %}
+            
+        {% else %}
+            <p>No subcategories.</p>
+        {% endif %}
+    </div>
+
+    <section class="campus endirim">
+        <h1>STEAM PAKETLƏRİMİZ</h1>
+        <p>Ən Sərfəli Və Sürətli Çatdırılma burada Oyun ZAD-ZUD'da</p>
+  
+        <div class="row">
+          <div class="campus-col">
+            <img src="{% static 'img/steam20.jpg' %}" alt="" />
+            <div class="layer">
+              <h3>20 TL UCUZ PAKET</h3>
+            </div>
+          </div>
+          <div class="campus-col">
+            <img src="{% static 'img/steam100.jpg' %}" alt="" />
+            <div class="layer">
+              <h3>100 TL NORMAL PAKET</h3>
+            </div>
+          </div>
+          <div class="campus-col">
+            <img src="{% static 'img/steam300.jpg' %}" alt="" />
+            <div class="layer">
+              <h3>300 TL BAHALI PAKET</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+
+    <footer>
+        <h1 class="footer-h1">Haqqımızda</h1>
+        <p class="footer-p">
+          Saytımız Azərbaycanda oyunlara ödəniş etmək istəyən oyunçular üçün rahat və sərfəli qiymətə ödəniş edəbiləcəyi bir saytdır. Əgər səndə hansısa oyuna ödəniş etmək istəyirsənsə sağ aşağıda çıxan mesaj qutucuğunnan oyunun adını yazıb saytımızda olub olmadığı haqda məlumat əldə edə bilərsiniz
+        </p>
+  
+        <div class="icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+  
+        <p class="footer-p">Made width </i> by ALPAY</p>
+      </footer>
+
+      <div class="footerr">
+        <div class="footer-top">
+          <h1 class="h1-white">Oyun oynamağa hazırlaşırsan?</h1>
+          <h1 class="h1-blue">Davay zəng elə.</h1>
+        </div>
+        <div class="footer-bottom-left">
+        
+          <p>Baku , Yeni Günəşli</p>
+          <div class="footer-gmail">
+            <img src="{% static 'img/gmail.svg'%}" alt="" />
+            <p>alpayabdullayev0@gmail.com</p>
+          </div>
+        </div>
+          <div class="footerrrr">
+            <div class="footer-bottom-right">
+              <div class="footer-links">
+                <a href="">Haqqımızda</a>
+                <a href="">xitmətlərimiz</a>
+                <a href="">Təcrübəmiz</a>
+              </div>
+            </div>
+            <div class="footer-links2">
+              <div class="footer-bottom-right">
+                <div class="footer-links">
+                  <a href="">Əlaqə</a>
+                  <a href="">Rəylər</a>
+                  <a href="">Paketlər</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="footer-bottom-right">
+              <div class="footer-links">
+                <a href="">TikTok</a>
+                <a href="">Instagram</a>
+                <a href="">Twitter</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom-bottom">
+            <div class="footer-bottom-links">
+              <p class="footer-copyright">
+                © All rights reserved. Alpay < 3 Lale. Game ZAD-ZUD / Oyun ZAD-ZUD / Neftçi / Forza 
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        
+     </div>
+</body>
+</html>
